@@ -1,0 +1,270 @@
+{
+    "tailf-ncs:device": [
+      {
+        "name": "ios0",
+        "address": "127.0.0.1",
+        "port": 10022,
+        "ssh": {
+          "host-key": [
+            {
+              "algorithm": "ssh-rsa",
+              "key-data": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDWGuRVtn+1edHbpE1rIHb7We8WfsQkoF5+Q6wHsDwc\ncU0rpSpRnT7vCQfjdhEagZ8sSTd6terfER1ho+GQ7uZZiTj0Uhxntp6QT6edZTrA0vTTxjYj\n1WoSV5fgmmbhKJ7vBWvXHMfZSogcqlUx5CJpexwCXanAKdqWLxrztg9errYFR7rPzkMPaGQQ\nIx1uFXCF16HHLyTL27oWapikjs146RLGiD/L+E0eW/D8NU+P4DhgVh77z7rNOqlNa8ZpKyx3\nQqCCshfMBSgtmMX9lwZSqFlH2vu87YRxKdiKlj04F3ZFv1a7ZY3d5DP7bc+Nbbty4mXGv0CN\nWT6qTEIFnHgN"
+            }
+          ]
+        },
+        "authgroup": "default",
+        "device-type": {
+          "cli": {
+            "ned-id": "cisco-ios-cli-6.24:cisco-ios-cli-6.24"
+          }
+        },
+        "commit-queue": {
+          "queue-length": 0
+        },
+        "active-settings": {
+          "connect-timeout": 20,
+          "read-timeout": 20,
+          "write-timeout": 20,
+          "ssh-keep-alive": {
+            "interval": 20,
+            "count": 3
+          },
+          "ned-keep-alive": {
+            "count": 3
+          },
+          "connect-retries": {
+            "attempts": 0,
+            "timeout": 3
+          },
+          "trace": "false",
+          "ned-settings": {
+            "use-junos-rollback": false
+          },
+          "commit-queue": {
+            "enabled-by-default": false
+          },
+          "session-pool": {
+            "idle-time": 30
+          },
+          "no-overwrite": {
+            "enabled-by-default": false
+          },
+          "out-of-sync-commit-behaviour": "reject"
+        },
+        "state": {
+          "oper-state": "unknown",
+          "transaction-mode": "ned",
+          "last-transaction-id": "317d318066f3fe0c4075b99f2e1a2afb",
+          "admin-state": "unlocked"
+        },
+        "capability": [
+          {
+            "uri": "http://tail-f.com/ns/ncs-ned/cli-allow-abbrev-keys"
+          },
+          {
+            "uri": "http://tail-f.com/ns/ncs-ned/show-partial?path-format=key-path"
+          },
+          {
+            "uri": "http://tail-f.com/ns/ncs-ned/show-stats-path"
+          },
+          {
+            "uri": "urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=trim"
+          },
+          {
+            "uri": "urn:ietf:params:xml:ns:yang:ietf-interfaces",
+            "revision": "2014-05-08",
+            "module": "ietf-interfaces"
+          },
+          {
+            "uri": "urn:ietf:params:xml:ns:yang:ietf-ip",
+            "revision": "2014-06-16",
+            "module": "ietf-ip"
+          },
+          {
+            "uri": "urn:ios",
+            "revision": "2019-05-17",
+            "module": "tailf-ned-cisco-ios"
+          },
+          {
+            "uri": "urn:ios-stats",
+            "revision": "2019-05-17",
+            "module": "tailf-ned-cisco-ios-stats"
+          }
+        ],
+        "module": [
+          {
+            "name": "ietf-interfaces",
+            "revision": "2014-05-08"
+          },
+          {
+            "name": "ietf-ip",
+            "revision": "2014-06-16"
+          },
+          {
+            "name": "tailf-ned-cisco-ios",
+            "revision": "2019-05-17"
+          },
+          {
+            "name": "tailf-ned-cisco-ios-stats",
+            "revision": "2019-05-17"
+          }
+        ],
+        "platform": {
+          "name": "ios",
+          "version": "cisco-ios-6.24",
+          "model": "NETSIM",
+          "serial-number": "ios0"
+        },
+        "config": {
+          "tailf-ned-cisco-ios:tailfned": {
+            "police": "cirmode"
+          },
+          "tailf-ned-cisco-ios:aaa": {
+            "accounting": {
+              "delay-start": {
+              }
+            }
+          },
+          "tailf-ned-cisco-ios:ip": {
+            "source-route": true,
+            "gratuitous-arps-conf": {
+              "gratuitous-arps": false
+            },
+            "finger": {
+            },
+            "http": {
+              "server": false,
+              "secure-server": false
+            }
+          },
+          "tailf-ned-cisco-ios:interface": {
+            "Loopback": [
+              {
+                "name": "0",
+                "ip": {
+                  "address": {
+                    "primary": {
+                      "address": "1.1.1.1",
+                      "mask": "255.255.255.255"
+                    }
+                  }
+                }
+              }
+            ],
+            "Ethernet": [
+              {
+                "name": "0/0/0",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              }
+            ],
+            "FastEthernet": [
+              {
+                "name": "0",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              },
+              {
+                "name": "0/0",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              },
+              {
+                "name": "1/0",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              },
+              {
+                "name": "1/1",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              }
+            ],
+            "GigabitEthernet": [
+              {
+                "name": "0",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              },
+              {
+                "name": "0/0",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              },
+              {
+                "name": "0/1",
+                "ip": {
+                  "no-address": {
+                    "address": false
+                  }
+                }
+              }
+            ]
+          },
+          "ietf-yang-library:modules-state": {
+            "module-set-id": "8256560991acfd345e826155c8f073c4",
+            "module": [
+              {
+                "name": "ietf-interfaces",
+                "revision": "2014-05-08",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-interfaces",
+                "feature": ["arbitrary-names", "if-mib", "pre-provisioning"],
+                "conformance-type": "implement"
+              },
+              {
+                "name": "ietf-ip",
+                "revision": "2014-06-16",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-ip",
+                "feature": ["ipv4-non-contiguous-netmasks", "ipv6-privacy-autoconf"],
+                "conformance-type": "implement"
+              },
+              {
+                "name": "tailf-ned-cisco-ios",
+                "revision": "2019-05-17",
+                "namespace": "urn:ios",
+                "conformance-type": "implement"
+              },
+              {
+                "name": "tailf-ned-cisco-ios-stats",
+                "revision": "",
+                "namespace": "urn:ios-stats",
+                "conformance-type": "implement"
+              }
+            ]
+          }
+        }
+  {
+    "errors": {
+      "error": [
+        {
+          "error-tag": "malformed-message",
+          "error-type": "application"
+        }
+      ]
+    }
+  }
+  
+  }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+"tailf-ncs:config": {
+    "junos:configuration": {
+      "version": "10.4R6",
+      "system": {
+        "host-name": "junos0",
+        "domain-name": "example.com",
+        "time-zone": "UTC",
+        "name-server": [
+          {
+            "name": "10.10.10.1"
+          },
+          {
+            "name": "10.10.20.1"
+          }
+        ],
+        "login": {
+          "message": "This is junos0"
+        },
+        "services": {
+          "ssh": {
+            "root-login": "deny",
+            "protocol-version": ["v2"]
+          },
+          "netconf": {
+            "ssh": {
+            }
+          }
+        },
+        "ntp": {
+          "server": [
+            {
+              "name": "10.20.10.110"
+            },
+            {
+              "name": "10.30.10.120"
+            }
+          ]
+        }
+      },
+      "interfaces": {
+        "interface": [
+          {
+            "name": "lo0",
+            "unit": [
+              {
+                "name": "0",
+                "family": {
+                  "inet": {
+                    "address": [
+                      {
+                        "name": "3.3.3.3/32"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "xe-0/0/0",
+            "unit": [
+              {
+                "name": "0",
+                "family": {
+                  "inet": {
+                    "address": [
+                      {
+                        "name": "10.10.1.1/24"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "xe-0/0/1",
+            "unit": [
+              {
+                "name": "0",
+                "family": {
+                  "inet": {
+                    "address": [
+                      {
+                        "name": "10.10.2.1/24"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "xe-0/0/2",
+            "unit": [
+              {
+                "name": "0",
+                "family": {
+                  "inet": {
+                    "address": [
+                      {
+                        "name": "10.10.8.6/24"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ietf-yang-library:modules-state": {
+      "module-set-id": "a22f691d9d0ea122ea06e0145847b587",
+      "module": [
+        {
+          "name": "junos",
+          "revision": "",
+          "namespace": "http://xml.juniper.net/xnm/1.1/xnm",
+          "conformance-type": "implement"
+        },
+        {
+          "name": "junos-rpc",
+          "revision": "",
+          "namespace": "urn:juniper-rpc",
+          "conformance-type": "implement"
+        }
+      ]
+    }
+  }
+}
+
